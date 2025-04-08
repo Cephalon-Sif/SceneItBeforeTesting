@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Scene It Before!</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="PamiltonTransparentBG.png">
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+</head>
+<body>
+    <!-- Left and right are related to the background of the site and how it is
+            split in two, these can not be put in the container -->
+    <div id="left"></div>
+    <div id="right"></div>
+    <div class="welcomeContainer">
+        <div class="welcomeContent">
+            <h1><span style="font-size: 96px; display: inline-block; transform: scaleY(1.5); position: relative; bottom: 15px;">S</span>CENE IT BEFORE!</h1>
+            <p>Bring your stage to life!</p>
+            <p>Create an account to start a Project! Or Login to hop back into it!</p>
+        </div>
+        <div class="welcomeButtons">
+            <button id="createAccountBtn">Create Account</button>
+            <button id="logInBtn">Log In</button>
+        </div>
+        <div class="logo">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="penguin"></div>
+        </div>
+    </div>
+    <script>
+        const setupAuth0 = async () => {
+            const auth0 = await createAuth0Client({
+                domain: "dev-gmprewiciwvaauxn.us.auth0.com",
+                client_id: "eNIZK1CtP2TTXt6NUGF6AW4ghRfx6VKA",
+                redirect_uri: "http://localhost/testWebsite/pages/accountsMainPage.html"
+            });
+
+            document.getElementById("logInBtn").addEventListener("click", async () => {
+                try {
+                await auth0.loginWithRedirect();
+                } catch (error) {
+                console.error("Login error:", error);
+                }
+            });
+        };
+
+        setupAuth0();
+    </script>
+</body>
+</html>
