@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title> Account Page! </title>
+    <link rel="stylesheet" href="accountsMainPage.css">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/X7nYyN1T/Pamilton-Transparent-BG.png">
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+</head>
+<body>
+    <div class="accountPageContainer">
+        <div class="leftSide">
+            <div class="leftSideTxt">
+                <p>Welcome, {User}!</p>
+            </div>
+            <button id="deleteAccountBtn">Delete Account</button>
+        </div>
+        <button id="signOutBtn">Sign Out</button>
+        <div class="projectsWindow">
+            <p>Project Overview</p>
+            <button id="addNewBtn">Add New +</button>
+            <button id="sharedBtn">Shared</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("addnewBtn").addEventListener("click", async () => {
+
+        })
+
+        window.onload = async () => {
+            const auth0 = await createAuth0Client({
+                domain: "dev-gmprewiciwvaauxn.us.auth0.com",
+                client_id: "eNIZK1CtP2TTXt6NUGF6AW4ghRfx6VKA",
+                redirect_uri: "http://localhost/testWebsite/pages/accountsMainPage.html"
+            });
+
+            const isCallback = window.location.href.includes("code=");
+            if (isCallback) {
+                await auth0.handleRedirectCallback();
+                const user = await auth0.getUser();
+                console.log("Authenticated User:", user);
+            }
+        };
+    </script>
+</body>
+</html>
