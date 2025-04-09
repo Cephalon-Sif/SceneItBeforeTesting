@@ -1,5 +1,0 @@
-*.data.gz   binary
-*.wasm.gz   binary
-*.js.gz     binary
-*.symbols.json.gz binary
-*.wasm      binary
