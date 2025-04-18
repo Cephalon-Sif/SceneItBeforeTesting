@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title> Account Page! </title>
+    <link rel="stylesheet" href="accountsMainPage.css">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/X7nYyN1T/Pamilton-Transparent-BG.png">
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+</head>
+<body>
+    <div class="leftSide">
+        <div class="leftSideTxt">
+            <p>Welcome, {User}!</p>
+        </div>
+        <button id="deleteAccountBtn">Delete Account</button>
+    </div>
+    <div class="accountPageContainer">
+        <button id="signOutBtn">Sign Out</button>
+        <div class="projectsWindow">
+            <div class="projectsWindowTop">
+                Project Overview
+                <div class = "button-container">
+                    <button id="addNewBtn">Add New +</button>
+                    <button id="sharedBtn">Shared</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

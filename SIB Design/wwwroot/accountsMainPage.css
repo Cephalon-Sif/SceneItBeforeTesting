@@ -1,0 +1,126 @@
+/* 
+These variables within root change the general theme of the site.
+Some colors need to be manually edited since they are offset a bit in the rgb values but this will
+change most of them to get a feel for how the site will look with different colors.
+*/
+
+:root 
+{
+    --primary-color: #62352A;
+    --secondary-color: #F0E5DF;
+}
+
+body 
+{
+    margin: 0px;
+    height: 100%;
+    font-family: Marcellus SC;
+}
+
+.accountPageContainer
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+}
+
+/* This portion includes properties for the left section of the site with the welcome message and delete account button. */
+.leftSide
+{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(55deg, var(--primary-color) 50%, var(--secondary-color) 50%);
+    color: var(--primary-color);
+    outline: 2px solid black;
+}
+.leftSideTxt p
+{
+    position: relative;
+    text-align: center;
+    align-content: center;
+    font-size: 300%;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
+}
+#deleteAccountBtn
+{
+    position: relative;
+    text-align: center;
+    align-content: center;
+    height: 5%;
+    width: 120px;
+    top: 65%;
+    left: 26%;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
+    background-color: rgb(255, 255, 255, 0.1);
+    color: white;
+    z-index: +1;
+}
+#deleteAccountBtn:hover
+{
+    background-color: rgba(243, 122, 1, 0.2);
+}
+
+/* This handles the sign out button placed in the top right corner of the page. */
+#signOutBtn
+{
+    position: relative;
+    text-align: center;
+    align-content: center;
+    margin: 50px;
+    left: 88%; 
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
+    color: var(--primary-color);
+    z-index: +1;
+}
+#signOutBtn:hover
+{
+    background-color: rgba(176, 133, 98, 0.322);
+}
+
+/* This section handles all the elements inside the project overview window. */
+.projectsWindow
+{
+    position: absolute;
+    height: 83%;
+    width: 78%;
+    left: 21%;
+    top: 15%;
+    color: var(--primary-color);
+    background: linear-gradient(55deg, var(--primary-color) 5%, var(--secondary-color) 5%);
+    outline: 2px solid var(--primary-color);
+    z-index: +1;
+}
+.projectsWindowTop
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   
+    font-size: 200%;
+    padding: 20px;
+}
+.projectsWindow button
+{
+    position: relative;
+    height: 30px;
+    width: 120px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    z-index: +1;
+}
+.projectsWindow button:hover
+{
+    background-color: #c19d74;
+}
