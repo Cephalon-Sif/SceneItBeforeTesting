@@ -18,10 +18,10 @@
         }
 
         const getTokenFromHash = (hash, key) => {
-            // Remove the '#' and parse the hash string of the URL
-            const params = new URLSearchParams(hash.substring(1));
-            // Retrieve the specific key in the URL
-            return params.get(key);
+        // Remove the '#' and parse the hash string of the URL
+        const params = new URLSearchParams(hash.substring(1));
+        // Retrieve the specific key in the URL
+        return params.get(key);
         }
 
         // Get the hash string in the URL and process the id token for user data
@@ -29,9 +29,8 @@
         const idToken = getTokenFromHash(urlHash, 'id_token');
         console.log('ID Token:', idToken);
         const userInfo = parseJwt(idToken);
-
-        // Simple and not very effective security measure of getting rid of hash in the URL
         // window.location.hash = '';
+
     </script>
 </head>
 <body>
@@ -45,17 +44,18 @@
         <button id="deleteAccountBtn">Delete Account</button>
     </div>
     <div class="accountPageContainer">
-        <button id="signOutBtn">Sign Out</button>
         <div class="projectsWindow">
             <div class="projectsWindowTop">
                 Project Overview
                 <div class="button-container">
-                    <button id="addNewBtn">Add New +</button>
-                    <button id="sharedBtn">Shared</button>
+                    <button id="addNewBtn" onclick="window.location.href='https://www.sceneitbefore.org/forms/createProjectForm.html'">Add New +</button>
+                    <button id="manageBtn" onclick="window.location.href='https://www.sceneitbefore.org/forms/manageProjectForm.html'">Manage</button>
+                    <button id="signOutBtn">Sign Out</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="accountsManagement.js"></script>
+    <script src="accountsProjects.js"></script>
 </body>
 </html>

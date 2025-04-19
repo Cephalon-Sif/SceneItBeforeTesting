@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Collaboration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div id="manageProjectForm">
+        <h1>Add collaborators or delete a project</h1>
+        <form action="/create-project" method="POST">
+            <div class="form-group">
+                <label for="collaborators">Collaborators (comma-separated usernames):</label><br>
+                <input type="text" id="collaborators" name="collaborators" placeholder="Enter collaborator usernames">
+            </div>
+            <button type="submit">Submit</button>
+            <button id="deleteProjectBtn" style="margin-left:55%;">Delete Project</button>
+        </form>
+    </div>
+</body>
+</html>

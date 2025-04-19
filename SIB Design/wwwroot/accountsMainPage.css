@@ -31,7 +31,6 @@ body {
     width: 20%;
     background: linear-gradient(55deg, var(--primary-color) 50%, var(--secondary-color) 50%);
     color: var(--primary-color);
-    outline: 2px solid black;
 }
 
 .leftSideTxt p {
@@ -60,39 +59,36 @@ body {
     z-index: +1;
 }
 
-    #deleteAccountBtn:hover {
-        background-color: rgba(243, 122, 1, 0.2);
-    }
+#deleteAccountBtn:hover {
+    background-color: rgba(243, 122, 1, 0.2);
+}
 
 /* This handles the sign out button placed in the top right corner of the page. */
 #signOutBtn {
     position: relative;
     text-align: center;
     align-content: center;
-    margin: 50px;
-    left: 88%;
     padding: 5px 15px;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
     color: var(--primary-color);
+    background: white;
     z-index: +1;
 }
 
-    #signOutBtn:hover {
-        background-color: rgba(176, 133, 98, 0.322);
-    }
+#signOutBtn:hover {
+    background-color: rgba(176, 133, 98, 0.322);
+}
 
 /* This section handles all the elements inside the project overview window. */
 .projectsWindow {
     position: absolute;
-    height: 83%;
+    height: 100%;
     width: 78%;
     left: 21%;
-    top: 15%;
+    top: 5%;
     color: var(--primary-color);
-    background: linear-gradient(55deg, var(--primary-color) 5%, var(--secondary-color) 5%);
-    outline: 2px solid var(--primary-color);
     z-index: +1;
 }
 
@@ -115,6 +111,6 @@ body {
     z-index: +1;
 }
 
-    .projectsWindow button:hover {
-        background-color: #c19d74;
-    }
+.projectsWindow button:hover {
+    background-color: #c19d74;
+}
