@@ -4,21 +4,18 @@ Some colors need to be manually edited since they are offset a bit in the rgb va
 change most of them to get a feel for how the site will look with different colors.
 */
 
-:root 
-{
+:root {
     --primary-color: #62352A;
     --secondary-color: #F0E5DF;
 }
 
-body 
-{
+body {
     margin: 0px;
     height: 100%;
     font-family: Marcellus SC;
 }
 
-.accountPageContainer
-{
+.accountPageContainer {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -28,8 +25,7 @@ body
 }
 
 /* This portion includes properties for the left section of the site with the welcome message and delete account button. */
-.leftSide
-{
+.leftSide {
     position: absolute;
     height: 100%;
     width: 20%;
@@ -37,16 +33,16 @@ body
     color: var(--primary-color);
     outline: 2px solid black;
 }
-.leftSideTxt p
-{
+
+.leftSideTxt p {
     position: relative;
     text-align: center;
     align-content: center;
     font-size: 300%;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.50);
 }
-#deleteAccountBtn
-{
+
+#deleteAccountBtn {
     position: relative;
     text-align: center;
     align-content: center;
@@ -63,19 +59,18 @@ body
     color: white;
     z-index: +1;
 }
-#deleteAccountBtn:hover
-{
-    background-color: rgba(243, 122, 1, 0.2);
-}
+
+    #deleteAccountBtn:hover {
+        background-color: rgba(243, 122, 1, 0.2);
+    }
 
 /* This handles the sign out button placed in the top right corner of the page. */
-#signOutBtn
-{
+#signOutBtn {
     position: relative;
     text-align: center;
     align-content: center;
     margin: 50px;
-    left: 88%; 
+    left: 88%;
     padding: 5px 15px;
     border-radius: 20px;
     cursor: pointer;
@@ -83,14 +78,13 @@ body
     color: var(--primary-color);
     z-index: +1;
 }
-#signOutBtn:hover
-{
-    background-color: rgba(176, 133, 98, 0.322);
-}
+
+    #signOutBtn:hover {
+        background-color: rgba(176, 133, 98, 0.322);
+    }
 
 /* This section handles all the elements inside the project overview window. */
-.projectsWindow
-{
+.projectsWindow {
     position: absolute;
     height: 83%;
     width: 78%;
@@ -101,16 +95,16 @@ body
     outline: 2px solid var(--primary-color);
     z-index: +1;
 }
-.projectsWindowTop
-{
+
+.projectsWindowTop {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;   
+    align-items: flex-start;
     font-size: 200%;
     padding: 20px;
 }
-.projectsWindow button
-{
+
+.projectsWindow button {
     position: relative;
     height: 30px;
     width: 120px;
@@ -120,7 +114,7 @@ body
     color: white;
     z-index: +1;
 }
-.projectsWindow button:hover
-{
-    background-color: #c19d74;
-}
+
+    .projectsWindow button:hover {
+        background-color: #c19d74;
+    }

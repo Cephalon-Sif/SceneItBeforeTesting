@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <title> Account Page! </title>
     <link rel="stylesheet" href="accountsMainPage.css">
-    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/X7nYyN1T/Pamilton-Transparent-BG.png">
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+    <link rel="icon" type="     * image/x-icon" href="https://i.postimg.cc/X7nYyN1T/Pamilton-Transparent-BG.png">
+    <script src="https://cdn.auth0.com/js/auth0/9.22.1/auth0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="accountsManagement.js"></script>
 </head>
 <body>
     <div class="leftSide">
         <div class="leftSideTxt">
-            <p>Welcome, {User}!</p>
+            <p>Welcome,
+            <script>document.write(userInfo.nickname)</script>!</p>
         </div>
         <button id="deleteAccountBtn">Delete Account</button>
     </div>
@@ -20,7 +23,7 @@
         <div class="projectsWindow">
             <div class="projectsWindowTop">
                 Project Overview
-                <div class = "button-container">
+                <div class="button-container">
                     <button id="addNewBtn">Add New +</button>
                     <button id="sharedBtn">Shared</button>
                 </div>
