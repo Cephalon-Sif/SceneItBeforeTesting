@@ -1,4 +1,4 @@
-pushd "C:\Users\elsie\source\repos\SIB VS Component\SIB Design"
+pushd "C:\Users\elsie\source\repos\SceneItBeforeTesting\SIB Design"
 dotnet publish -c release -r linux-arm64 --self-contained "SIB Design.csproj"
 cd bin\release\net8.0\linux-arm64\publish
 CHOICE /C YN /M "Did you stop the server???"
