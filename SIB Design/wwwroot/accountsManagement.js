@@ -1,29 +1,4 @@
 // https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens#example-post-to-token-url
-
-function parseJwt(token) {
-    try {
-        return JSON.parse(atob(token.split('.')[1]));
-    } catch (e) {
-        return null;
-    }
-}
-
-const getTokenFromHash = (hash, key) => {
-    // Remove the '#' and parse the hash string of the URL
-    const params = new URLSearchParams(hash.substring(1));
-    // Retrieve the specific key in the URL
-    return params.get(key);
-}
-
-// Get the hash string in the URL and process the id token for user data
-const urlHash = window.location.hash;
-const idToken = getTokenFromHash(urlHash, 'id_token');
-console.log('ID Token:', idToken);
-const userInfo = parseJwt(idToken);
-
-// Simple and not very effective security measure of getting rid of hash in the URL
-// window.location.hash = '';
-
 // Create a webAuth instance of Auth0 credentials for the logout function
 const webAuth = new auth0.WebAuth({
     domain: 'dev-gmprewiciwvaauxn.us.auth0.com',
